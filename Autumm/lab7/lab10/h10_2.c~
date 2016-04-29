@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+	int x,y;
+	printf("Input x,y: ");
+	scanf("%d %d", &x, &y);
+
+	t = -(x>0)*(y<0) - (x<0)*(y>0);
+	
+	x = (x<5000)*(x>=-5000)*x + (x>=5000)*4999 + (x<-5000)*(-5000);
+	x = (x>=0)*x + (x<0)*(10000+x);
+
+	y = (y<5000)*(y>=-5000)*y + (y>=5000)*4999 + (y<-5000)*(-5000);
+	y = (y>=0)*y + (y<0)*(10000+y);
+
+	printf("x'=%d\ty'=%d\n", x, y);
+	if (x * y >= 10000)
+		if (x * y - 10000 >= 10000)
+			printf ("x'* y'= %d\n", 4999-t);
+		else printf("x'* y'= %d\n", x * y - 10000);
+	else printf ("x'* y'= %d\n", x * y);
+	if (x * y < 5000)
+		printf("x * y = %d\n", x * y);
+	else printf ("x * y = %d\n", x * y - 10000);
+	return 0;
+}

@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main()
+{
+float x;
+int t,y;
+printf("Input x: ");
+scanf("%f",&x);
+t = x;
+y = t + (t <= x);
+printf("x=%f\t y=%d\n",x,y);
+return 0;
+}

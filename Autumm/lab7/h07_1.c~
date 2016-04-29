@@ -1,0 +1,10 @@
+#include <stdio.h>
+// Convert demo program
+int main()
+{
+long int i;
+printf("Input i: ");
+scanf("%ld", &i);
+printf("Hexadecimal representation of i: %lx\n",i);
+return 0;
+}

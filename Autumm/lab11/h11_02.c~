@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+int main()
+{
+	float x , a, eps;
+	int n=0;
+	bool ok = false;
+	printf("Input a and epsilon: ");
+	scanf("%f %d",&a,&eps);
+	x = a;
+	do 
+	{
+		printf("x[%d] = %f\n",n,x);
+		x0 = x;
+		x = 0.5*(a/x + x);
+		n++;
+	}
+	while ((x0 - x) < eps);
+	return 0;
+}

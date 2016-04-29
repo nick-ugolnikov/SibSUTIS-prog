@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+long long int t = pow (2,sizeof(int)*8-1)-1; // 4294967296
+printf("Sizeof(int): %ld bytes.\nMaximal value: %lld\n",sizeof(int),t);
+return 0;
+}

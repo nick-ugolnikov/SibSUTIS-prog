@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+	int x, y , summ, w, d , a, b, div, i=0;
+	printf("Input x and y: ");
+	scanf("%d %d",&x,&y);
+	summ = x + y;
+	printf("Summ = %d\n",summ);
+	w = summ;
+	while (w>0)
+	{
+		i++;
+		d = s % 10;
+		if (d>1)
+		{
+			div = pow(10,i);
+			d = d % 2;
+			b = summ % div;
+			a = summ - b;
+			summ = (a/div)/10;
+			summ = (summ + d)*div + b;			
+		}
+		w = summ;
+		w /= 10;
+	}
+	printf("%d + %d = %d",x,y,summ);
+	return 0;
+}
